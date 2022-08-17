@@ -24,12 +24,12 @@ const CalcButtonPanel = () => {
                     <CalcButton value={"."}>.</CalcButton>
                 </div>
                 <div className="grid gap-2">
-                    <CalcButton operator="clear">AC</CalcButton>
-                    <CalcButton operator="add">&#43;</CalcButton>
-                    <CalcButton operator="subtract">&minus;</CalcButton>
-                    <CalcButton operator="divide">&divide;</CalcButton>
-                    <CalcButton operator="multiply">&times;</CalcButton>
-                    <CalcButton className="bg-amber-500" operator="evaluate">
+                    <CalcButton value="clear">AC</CalcButton>
+                    <CalcButton value="+">&#43;</CalcButton>
+                    <CalcButton value="-">&minus;</CalcButton>
+                    <CalcButton value="/">&divide;</CalcButton>
+                    <CalcButton value="x">&times;</CalcButton>
+                    <CalcButton className="bg-amber-500" value="evaluate">
                         &#61;
                     </CalcButton>
                 </div>

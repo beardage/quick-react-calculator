@@ -2,28 +2,24 @@ import { ReactNode } from "react";
 import { useDisplay } from "../../context/DisplayContext";
 
 type CalcButtonParams = {
-    value?: number | string;
-    operator?:
-        | "add"
-        | "subtract"
-        | "divide"
-        | "multiply"
-        | "evaluate"
-        | "clear";
+    value?: number | "." | "+" | "-" | "/" | "x" | "evaluate" | "clear";
     className?: string;
     children: ReactNode;
 };
-const CalcButton = ({
-    value,
-    operator,
-    className,
-    children,
-}: CalcButtonParams) => {
+const CalcButton = ({ value, className, children }: CalcButtonParams) => {
     const { displayValue, setDisplayValue } = useDisplay();
 
     const handleOnClick = () => {
-        if (value) {
+        if (value !== "evaluate" && value !== "clear") {
+            // TODO: check for last character being a non-int and swap instead of adding
+            // TODO: check for empty string and show error when non-int value
             setDisplayValue(displayValue + value);
+        }
+        if (value === "clear") {
+            setDisplayValue("");
+        }
+        if (value === "evaluate") {
+            // TODO: parse displayValue and setDisplayValue with evaluated value
         }
     };
 
