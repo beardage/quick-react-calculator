@@ -20,7 +20,7 @@ const CalcButton = ({
 }: CalcButtonParams) => {
     return (
         <button
-            className={`bg-gray-700 text-xl rounded p-2 ${className}`}
+            className={`bg-gray-700 text-xl rounded p-2 transition-all duration-75 -translate-y-0.5 shadow-sm active:shadow-none active:translate-y-0 ${className}`}
             type="button"
         >
             {children}
