@@ -1,7 +1,6 @@
 import CalcButton from "./CalcButton";
 
 const CalcButtonPanel = () => {
-    //<CalcButton value="0" />
     return (
         <>
             <div className=" grid gap-2 grid-cols-4">
@@ -28,7 +27,7 @@ const CalcButtonPanel = () => {
                     <CalcButton value="+">&#43;</CalcButton>
                     <CalcButton value="-">&minus;</CalcButton>
                     <CalcButton value="/">&divide;</CalcButton>
-                    <CalcButton value="x">&times;</CalcButton>
+                    <CalcButton value="*">&times;</CalcButton>
                     <CalcButton className="bg-amber-500" value="evaluate">
                         &#61;
                     </CalcButton>

@@ -1,8 +1,9 @@
 import { ReactNode } from "react";
 import { useDisplay } from "../../context/DisplayContext";
+import { evaluate } from "mathjs";
 
 type CalcButtonParams = {
-    value?: number | "." | "+" | "-" | "/" | "x" | "evaluate" | "clear";
+    value?: number | "." | "+" | "-" | "/" | "*" | "evaluate" | "clear";
     className?: string;
     children: ReactNode;
 };
@@ -20,6 +21,7 @@ const CalcButton = ({ value, className, children }: CalcButtonParams) => {
         }
         if (value === "evaluate") {
             // TODO: parse displayValue and setDisplayValue with evaluated value
+            setDisplayValue(evaluate(displayValue));
         }
     };
 
