@@ -21,7 +21,7 @@ const CalcButton = ({ value, className, children }: CalcButtonParams) => {
         }
         if (value === "evaluate") {
             // TODO: parse displayValue and setDisplayValue with evaluated value
-            setDisplayValue(evaluate(displayValue));
+            setDisplayValue(String(evaluate(displayValue)));
         }
     };
 
